@@ -1,0 +1,32 @@
+{
+  "name": "dance-archive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
+    "testUsers": "env-cmd -f ./config/test.env jest tests/user.test.js --detectOpenHandles --watch --runInBand",
+    "testSeries": "env-cmd -f ./config/test.env jest tests/series.test.js --detectOpenHandles --watch --runInBand",
+    "testCompetitions": "env-cmd -f ./config/test.env jest tests/competition.test.js --detectOpenHandles --watch --runInBand",
+    "testCategories": "env-cmd -f ./config/test.env jest tests/category.test.js --detectOpenHandles --watch --runInBand",
+    "testBattles": "env-cmd -f ./config/test.env jest tests/battle.test.js --detectOpenHandles --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.7",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^9.0.1",
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2"
+  }
+}
